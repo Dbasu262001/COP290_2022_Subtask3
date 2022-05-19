@@ -23,7 +23,7 @@ int main(int charc,char** argv){
    z=(pred+2)->label;
 string St;
 if(argv[2]==NULL){
-    St= "output.txt";
+    St= "outfile.txt";
     cout<<"Your expected output is stored in output.txt in the same directory of main.cpp file"<<endl;
 }else{
   St = argv[2];
@@ -33,6 +33,5 @@ ofstream OUTFILE;
 OUTFILE.open(St,ios_base::app);
 OUTFILE<<argv[1]<<"  "<<Output_String_Array[x]<<" "<<Output_String_Array[y]<<" "<<Output_String_Array[z]<<" "<<(pred+0)->prob<<" "<<(pred+1)->prob<<" "<<(pred+2)->prob<<endl;
 OUTFILE.close();
-cout<<argv[1]<<"  "<<Output_String_Array[x]<<" "<<Output_String_Array[y]<<" "<<Output_String_Array[z]<<" "<<(pred+0)->prob<<" "<<(pred+1)->prob<<" "<<(pred+2)->prob<<endl;
 return 0;
 }
